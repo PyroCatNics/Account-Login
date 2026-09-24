@@ -11,11 +11,11 @@ def Ask():
     if UsNaLogin != "guest":
         UsPaLogin = input("\nPassword:\n")
         AccountLogin = UsNaLogin + "  " + UsPaLogin
-        AccountConfirm = open("c:\\Users\\jacko\\Python Projects\\Account_stuff\\AccountFile.txt","r")
+        AccountConfirm = open("AccountFile.txt","r")
 
         if  AccountLogin in AccountConfirm.read():
             print("\nAccount Found!")
-            file = open("c:\\Users\\jacko\\Python Projects\\Account_stuff\\Top_secret_"+UsNaLogin+".txt","w")
+            file = open("Top_secret_"+UsNaLogin+".txt","w")
             text = ("This is top secret file that belongs to ")
             textToWrite = text + UsNaLogin
             file.write(str(textToWrite))
@@ -26,7 +26,7 @@ def Ask():
            Ask()
     else:
         print("Continuing as guest.")
-        file = open("c:\\Users\\jacko\\Python Projects\\Account_stuff\\Not_so_secret.txt","w")
+        file = open("Not_so_secret.txt","w")
         file.write("This is a guest file.\n\n")
         file.close
 Ask()
