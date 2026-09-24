@@ -1,7 +1,8 @@
+#I haven't yet added a check for if the entered username and password are blank (this displays 'Account Found!')
+
 import os
 os.system("cls")
 
-ShouldCreate = ("")
 print("Please input your username and password to log into your account, or continue as a guest:\n")
 
 def Ask():
