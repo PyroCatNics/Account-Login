@@ -53,7 +53,7 @@ def Confirm():
     
     global Confirmation
 
-    File = open("C:\\Users\\jacko\\Python Projects\\Account_stuff\\AccountFile.txt","r")
+    File = open("AccountFile.txt","r")
     if UsNa in File.read():
         print("Username already in use, please try again.")
         UserNameAsk()
@@ -66,7 +66,7 @@ def Confirm():
             print("Password Confirmation must be the same as Password")
             Confirm()
         else:
-            File = open("C:\\Users\\jacko\\Python Projects\\Account_stuff\\AccountFile.txt","a")
+            File = open("AccountFile.txt","a")
             File.write(UsNa)
             File.write("  ")
             File.write(UsPa)
